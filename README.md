@@ -17,16 +17,10 @@ cd ./backend
 pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
-or, with `uv`
-```bash
-cd ./backend
-uv sync
-uv run uvicorn main:app --host 0.0.0.0 --port 8000
-```
 
 ## Demo
 
-
+Go to `<server_url>:8000/`.
 ![Download in progress](image.png)
 
 ```bash
@@ -50,3 +44,16 @@ uv run uvicorn main:app --host 0.0.0.0 --port 8000
 4 directories, 10 files
 ```
 Note that, the files are stored under `snapshots` folder directly, instead of soft-link to a file the `blob` folder as in the `huggingface-cli`.
+
+### Verify the model downloaded
+
+#### Option 1: 
+Go to `<server_url>:8000/scan-cache`.
+It should return the output of the `huggingface-cli scan-cache`.
+
+#### Option 2:
+```
+# requires transformers and torch
+cd backend
+python ./backend/demo_model_run.py
+```
