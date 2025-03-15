@@ -56,4 +56,6 @@ It should return the output of the `huggingface-cli scan-cache`.
 # requires transformers and torch
 cd backend
 python ./backend/demo_model_run.py
+# Hello, how are you?
+# I'm fine. I'm just tired. I'm not sure what's going on. I'm not sure what's going on. I'm not sure what's going on. I'm not sure what's
 ```
