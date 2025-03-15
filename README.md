@@ -52,7 +52,7 @@ Go to `<server_url>:8000/scan-cache`.
 It should return the output of the `huggingface-cli scan-cache`.
 
 #### Option 2:
-```
+```bash
 # requires transformers and torch
 cd backend
 python ./backend/demo_model_run.py
