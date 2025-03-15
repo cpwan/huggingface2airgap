@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { listFiles } from '@huggingface/hub';
 import { minimatch } from 'minimatch';
 
-// Define the backend URL as a global variable
-const BACKEND_URL = `wss://${window.location.hostname}:${window.location.port}/stream-model`;
+let BACKEND_URL = '';
+
+if (typeof window !== 'undefined') {
+    BACKEND_URL = `wss://${window.location.hostname}:${window.location.port}/stream-model`;
+}
 
 interface File {
     path: string;
