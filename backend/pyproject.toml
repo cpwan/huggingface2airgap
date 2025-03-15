@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.11",
+    "huggingface-hub[cli]>=0.29.3",
     "uvicorn[standard]>=0.34.0",
 ]
